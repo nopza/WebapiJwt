@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebapiJwt", "WebapiJwt\WebapiJwt.csproj", "{616DF011-7846-4CB6-B44C-B6E11266E60F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{616DF011-7846-4CB6-B44C-B6E11266E60F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{616DF011-7846-4CB6-B44C-B6E11266E60F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{616DF011-7846-4CB6-B44C-B6E11266E60F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{616DF011-7846-4CB6-B44C-B6E11266E60F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {87FCF42A-BB4F-488C-A62C-29EF59AABAD0}
+	EndGlobalSection
+EndGlobal
