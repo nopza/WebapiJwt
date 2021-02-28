@@ -30,9 +30,9 @@ namespace WebapiJwt.Controllers
         public IActionResult Post(string username, string password)
         {
             IEnumerable<User2> objList = _db.User2;
-            var CheckUser = objList.Where(x => x.Username == username && x.Password == password);
+            var queryUser = objList.Where(x => x.Username == username && x.Password == password).FirstOrDefault();
 
-            if (CheckUser != null)
+            if (queryUser != null)
             {
                 return new ObjectResult(GenerateToken(username));
             }
