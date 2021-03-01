@@ -7,6 +7,7 @@ namespace WebapiJwt.ViewModels
 {
     public class UserViewModel
     {
+        public string SearchName { get; set; }
         public List<UserModel> UserList { get; set; }
     }
     public class UserModel
@@ -15,7 +16,6 @@ namespace WebapiJwt.ViewModels
         public string Username { get; set; }
         public string Password { get; set; }
         public string Name { get; set; }
-        public int Age { get; set; }
     }
 
 }

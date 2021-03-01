@@ -13,7 +13,7 @@ using WebapiJwt.Models;
 
 namespace WebapiJwt.Controllers
 {
-    public class TokenController : Controller
+    public class TokenController : ControllerBase
     {
         private const string SECRET_KEY = "HELLISBETTERTHANHEAVENHELLISBETTERTHANHEAVENHELLISBETTERTHANHEAVEN";
         public static readonly SymmetricSecurityKey SIGNING_KEY = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(TokenController.SECRET_KEY));
