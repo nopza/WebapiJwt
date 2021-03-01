@@ -37,39 +37,19 @@ namespace WebapiJwt.Controllers
 
         [HttpPost]
         [Route("api/account/SearchName")]
-        public IActionResult SearchName(UserViewModel user)
+        public IEnumerable<User2> SearchName(string nameIn)
         {
+            var nameCheck = nameIn ?? string.Empty;
             IEnumerable<User2> objList = _db.User2;
-            UserViewModel userViewModel = new UserViewModel();
-            userViewModel.UserList = objList.Select(e => new UserModel
+            var queryUser = objList.Select(x => new User2
             {
-                Id = e.Id,
-                Name = e.Name,
-                Username = e.Username,
-                Password = e.Password
-            }).ToList();
-            var name = user.SearchName ?? string.Empty;
-            user.UserList = userViewModel.UserList
-                .Where(x => x.Name.Contains(name, StringComparison.InvariantCultureIgnoreCase)).ToList();
-            return Ok(user);
+                Id = x.Id,
+                Username = x.Username,
+                Password = x.Password,
+                Name = x.Name
+            }).Where(y => y.Name.Contains(nameCheck, StringComparison.InvariantCultureIgnoreCase)).ToArray();
+            return queryUser;
         }
-
-        // Fixing
-        //[HttpPost]
-        //[Route("api/account/SearchName")]
-        //public IActionResult SearchName(string nameIn)
-        //{
-        //    var nameCheck = nameIn ?? string.Empty;
-        //    var objList = _db.User2.Select(x => new 
-        //    {
-        //        x.Id,
-        //        x.Name,
-        //        x.Username,
-        //        x.Password
-        //    }).Where(y => y.Name.Contains(nameCheck, StringComparison.InvariantCultureIgnoreCase)).ToList();
-
-        //    return Ok(objList);
-        //}
 
 
         [HttpPost]
